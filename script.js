@@ -1,6 +1,6 @@
 let total = 0;
 
-
+//adding event handler in the card section
 function handleClick(target) {
 
   const selectedItemsContainer = document.getElementById('selectedItems');
@@ -20,7 +20,7 @@ function handleClick(target) {
   finalTotalPrice();
 }
 
-
+//Enabling and disabling "make purchse" and "apply" button
 function finalTotalPrice() {
   const finalTotalPrice = document.getElementById('finalPrice');
   finalTotalPrice.innerText = total;
@@ -34,7 +34,7 @@ function finalTotalPrice() {
 
 
 
-
+// discount area
 document.getElementById('applyButton').addEventListener('click', function () {
   const couponCodeInput = document.getElementById('couponCodeInput');
   const couponCode = couponCodeInput.value.trim();
@@ -52,3 +52,20 @@ document.getElementById('applyButton').addEventListener('click', function () {
     finalTotalPriceElement.innerText = (total - discount).toFixed(2);
   }
 });
+
+// Go home button part and resetting value to zero , clear text area empty and will take me to homepage
+document.getElementById('goHomeButton').addEventListener('click', function () {
+  total = 0;
+
+  const selectedItemsContainer = document.getElementById('selectedItems');
+  selectedItemsContainer.innerHTML = '';
+
+  document.getElementById('totalPrice').innerText = '0';
+  document.getElementById('discountPrice').innerText = '0';
+  document.getElementById('finalPrice').innerText = '0';
+  document.getElementById('couponCodeInput').value = '';
+
+  const modal = document.getElementById('my_modal_1');
+  modal.close();
+});
+
