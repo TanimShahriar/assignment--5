@@ -35,4 +35,20 @@ function finalTotalPrice() {
 
 
 
+document.getElementById('applyButton').addEventListener('click', function () {
+  const couponCodeInput = document.getElementById('couponCodeInput');
+  const couponCode = couponCodeInput.value.trim();
+  if (couponCode === 'SELL200') {
 
+    const discountPercentage = 20;
+    const discount = (total * discountPercentage) / 100;
+
+
+    const discountElement = document.getElementById('discountPrice');
+    discountElement.innerText = discount.toFixed(2);
+
+
+    const finalTotalPriceElement = document.getElementById('finalPrice');
+    finalTotalPriceElement.innerText = (total - discount).toFixed(2);
+  }
+});
