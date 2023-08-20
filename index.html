@@ -54,7 +54,7 @@
       <!-- kitchenware card -->
       <div class="grid grid-cols-4 px-44 gap-7">
         <!-- card-1 -->
-        <div onclick="handleClick(this)"
+        <div onclick="handleClick(this)" id="first"
           class="space-y-5 text-center rounded-lg px-16 py-10 bg-white hover:bg-green-200 cursor-pointer duration-100">
           <img class="mx-auto w-72 h-40 bg-slate-200 px-10 rounded-md py-8" src="images/prod1.png" alt="">
           <!-- ratings -->
@@ -69,7 +69,7 @@
           <p class="text-lg font-normal opacity-50">39.00 TK</p>
         </div>
         <!-- card-2 -->
-        <div
+        <div onclick="handleClick(this)"
           class="space-y-5 text-center rounded-lg px-16 py-10 bg-white hover:bg-green-200 cursor-pointer duration-100">
           <img class="mx-auto w-72 h-40 bg-slate-200 px-10 rounded-md py-8" src="images/prod2.png" alt="">
           <!-- ratings -->
@@ -84,7 +84,7 @@
           <p class="text-lg font-normal opacity-50">25.00 TK</p>
         </div>
         <!-- card-3 -->
-        <div
+        <div onclick="handleClick(this)"
           class="space-y-5 text-center rounded-lg px-16 py-10 bg-white hover:bg-green-200 cursor-pointer duration-100">
           <img class="mx-auto w-72 h-40 bg-slate-200 px-10 rounded-md py-8" src="images/prod3.png" alt="">
           <!-- ratings -->
@@ -105,31 +105,32 @@
             <h3 class="text-2xl font-semibold mb-3">Have coupon?</h3>
 
             <div class="input-group">
-              <input type="text" placeholder="Coupon code" class="input input-bordered" />
-              <button class="bg-[#E527B2] text-white text-lg font-medium px-4 rounded-md">
-                Apply
-              </button>
+              <input type="text" placeholder="Coupon code" class="input input-bordered" id="couponInput" />
+
+              <button class="bg-[#E527B2] text-white text-lg font-medium px-4 rounded-md" id="applyButton"
+                disabled>Apply</button>
+
 
             </div>
           </div>
           <!-- card-5 -->
-          <div class=" bg-white px-12 py-10 h-64 mt-5">
-            <ul class="list list-decimal text-xl font-medium">
-              <li>Home Cooker</li>
-              <li>Sports cates</li>
-              <li>Home Cooker</li>
-            </ul>
+          <div class=" bg-white px-12 py-2 h-64 mt-5 rounded-md">
+
             <div class="textContainer" id="selectedItems">
 
             </div>
             <ul class="mt-5">
-              <li class="text-xl font-medium">Total price: <span class="text-lg font-normal">00</span></li>
-              <li class="text-xl font-medium">Discount: <span class="text-lg font-normal">00</span></li>
-              <li class="text-xl font-medium">Total: <span class="text-lg font-normal">00</span></li>
+              <li class="text-xl font-medium">Total price: <span id="totalPrice"
+                  class="text-lg font-normal opacity-40">00</span> <span class="opacity-40 text-lg">TK</span> </li>
+              <li class="text-xl font-medium">Discount: <span class="text-lg font-normal opacity-40">00</span> <span
+                  class="opacity-40 text-lg">TK</span> </li>
+              <li class="text-xl font-medium">Total: <span id="finalPrice"
+                  class="text-lg font-normal opacity-40">00</span> <span class="opacity-40 text-lg">TK</span> </li>
             </ul>
             <div class="">
-              <button class="  capitalize bg-[#E527B2] text-white text-lg font-medium px-6 mt-1 py-2 rounded-md"
-                onclick="my_modal_1.showModal()">Make Purchase</button>
+              <button class="capitalize bg-[#E527B2] text-white text-lg font-medium px-6 mt-1 py-2 rounded-md"
+                onclick="my_modal_1.showModal()" id="makePurchaseButton" disabled>Make Purchase</button>
+
               <dialog id="my_modal_1" class="modal">
                 <form method="dialog" class="modal-box">
                   <img class="mx-auto" src="images/congo.png" alt="">
@@ -160,7 +161,7 @@
       <!-- Sportswear card -->
       <div class="grid grid-cols-3 px-44 gap-7 mr-[355px]">
         <!-- card-1 -->
-        <div
+        <div onclick="handleClick(this)"
           class="space-y-5 text-center rounded-lg px-16 py-10 bg-white hover:bg-green-200 cursor-pointer duration-100">
           <img class="mx-auto w-72 h-40 bg-slate-200 px-10 rounded-md py-8" src="images/prod4.png" alt="">
           <!-- ratings -->
@@ -175,7 +176,7 @@
           <p class="text-lg font-normal opacity-50">49.00 TK</p>
         </div>
         <!-- card-2 -->
-        <div
+        <div onclick="handleClick(this)"
           class="space-y-5 text-center rounded-lg px-16 py-10 bg-white hover:bg-green-200 cursor-pointer duration-100">
           <img class="mx-auto w-72 h-40 bg-slate-200 px-10 rounded-md py-8" src="images/prod5.png" alt="">
           <!-- ratings -->
@@ -190,7 +191,7 @@
           <p class="text-lg font-normal opacity-50">69.00 TK</p>
         </div>
         <!-- card-3 -->
-        <div
+        <div onclick="handleClick(this)"
           class="space-y-5 text-center rounded-lg px-16 py-10 bg-white hover:bg-green-200 cursor-pointer duration-100">
           <img class="mx-auto w-72 h-40 bg-slate-200 px-10 rounded-md py-8" src="images/prod6.png" alt="">
           <!-- ratings -->
