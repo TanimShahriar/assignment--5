@@ -20,13 +20,21 @@ function handleClick(target) {
   finalTotalPrice();
 }
 
-//Enabling and disabling "make purchse" and "apply" button
+//Enabling and disabling "make purchse" and "apply" button, coupon code input field
 function finalTotalPrice() {
   const finalTotalPrice = document.getElementById('finalPrice');
   finalTotalPrice.innerText = total;
 
   const makePurchaseButton = document.getElementById('makePurchaseButton');
   makePurchaseButton.disabled = total <= 0;
+
+  if (total >= 200) {
+    const couponCodeInput = document.getElementById('couponCodeInput');
+    couponCodeInput.disabled = false;
+  } else {
+    const couponCodeInput = document.getElementById('couponCodeInput');
+    couponCodeInput.disabled = true;
+  }
 
   if (total > 0) {
     makePurchaseButton.classList.remove('bg-slate-300');
@@ -63,7 +71,6 @@ document.getElementById('applyButton').addEventListener('click', function () {
 });
 
 
-
 //Coupon code apply button color enable area
 
 couponCodeInput.addEventListener('input', function () {
@@ -73,9 +80,6 @@ couponCodeInput.addEventListener('input', function () {
     applyButton.classList.add('bg-[#E527B2]');
   }
 });
-
-
-
 
 // Go home button part and resetting value to zero , clear text area empty and will take me to homepage
 document.getElementById('goHomeButton').addEventListener('click', function () {
