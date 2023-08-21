@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- logo -->
+  <!-- icon -->
   <link rel="shortcut icon" href="images/Summer 1.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,7 @@
 
 <body class="font-worksans">
   <!-- banner section -->
-  <section class="bg-[#F9F6E2] flex justify-between px-64 items-center py-10 ">
+  <section class="bg-[#F9F6E2] flex justify-between px-52 items-center py-10 ">
     <!-- text-paragraph-heading div -->
     <div class=" text-center">
       <h5 class="text-3xl font-medium text-[#111]">---SALE FEVER---</h5>
@@ -48,16 +48,16 @@
 
   <!-- main section -->
   <main>
-    <section class="bg-[#F8F8F8] px-16 py-10">
-      <!-- kitchenware -->
-      <div class="py-16">
-        <h2 class="text-4xl font-semibold text-[#111] mb-5 ml-44">Kitchenware</h2>
-        <!-- kitchenware card -->
-        <div class="grid grid-cols-4 px-44 gap-7">
+    <section class="flex justify-between gap-10 px-52 bg-[#F8F8F8]">
+      <div class=" w-[80%]">
+        <h2 class="text-4xl font-semibold text-[#111] mb-10 mt-16 ">Kitchenware</h2>
+
+        <div class="flex gap-10 ">
+          <!-- kitchenware card -->
           <!-- card-1 -->
           <div onclick="handleClick(this)" id="first"
             class="space-y-5 text-center rounded-lg px-16 py-10 bg-white hover:bg-green-200 cursor-pointer duration-100">
-            <img class="mx-auto w-72 h-40 bg-slate-200 px-10 rounded-md py-8" src="images/prod1.png" alt="">
+            <img class="mx-auto w-64 h-48 bg-slate-200 px-10 rounded-md py-8" src="images/prod1.png" alt="">
             <!-- ratings -->
             <div class="rating">
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -69,10 +69,11 @@
             <h5 class="text-2xl font-semibold">K. Accessories</h5>
             <p class="text-lg font-normal opacity-50">39.00 TK</p>
           </div>
+
           <!-- card-2 -->
           <div onclick="handleClick(this)"
             class="space-y-5 text-center rounded-lg px-16 py-10 bg-white hover:bg-green-200 cursor-pointer duration-100">
-            <img class="mx-auto w-72 h-40 bg-slate-200 px-10 rounded-md py-8" src="images/prod2.png" alt="">
+            <img class="mx-auto w-64 h-48 bg-slate-200 px-10 rounded-md py-8" src="images/prod2.png" alt="">
             <!-- ratings -->
             <div class="rating">
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -84,10 +85,11 @@
             <h5 class="text-2xl font-semibold">E. Accessories</h5>
             <p class="text-lg font-normal opacity-50">25.00 TK</p>
           </div>
+
           <!-- card-3 -->
           <div onclick="handleClick(this)"
             class="space-y-5 text-center rounded-lg px-16 py-10 bg-white hover:bg-green-200 cursor-pointer duration-100">
-            <img class="mx-auto w-72 h-40 bg-slate-200 px-10 rounded-md py-8" src="images/prod3.png" alt="">
+            <img class="mx-auto w-64 h-48 bg-slate-200 px-10 rounded-md py-8" src="images/prod3.png" alt="">
             <!-- ratings -->
             <div class="rating">
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -99,78 +101,18 @@
             <h5 class="text-2xl font-semibold">Home Cooker</h5>
             <p class="text-lg font-normal opacity-50">49.00 TK</p>
           </div>
-
-          <div>
-            <!-- card-4 -->
-            <div class="px-3 bg-white pt-3 h-28 rounded-md ">
-              <h3 class="text-2xl font-semibold mb-3">Have coupon?</h3>
-
-              <!-- coupon input and apply button area -->
-              <div class="input-group">
-                <input type="text" placeholder="Coupon code" class="input input-bordered" id="couponCodeInput" />
-
-                <button id="applyButton" class="bg-[#E527B2] text-white text-lg font-medium px-4 rounded-md"
-                  disabled>Apply</button>
-
-              </div>
-            </div>
-            <!-- card-5 -->
-            <!-- calculation box -->
-            <div class="calculation-box  bg-white px-12 py-2 h-64 mt-5 rounded-md">
-
-              <div class="textContainer" id="selectedItems">
-              </div>
-
-              <ul class="calculation-box mt-5">
-                <li class="text-xl font-medium">Total price: <span id="totalPrice"
-                    class="text-lg font-normal opacity-40">00</span> <span class="opacity-40 text-lg">TK</span> </li>
-                <li class="text-xl font-medium">Discount: <span id="discountPrice"
-                    class="text-lg font-normal opacity-40">00</span> <span class="opacity-40 text-lg">TK</span> </li>
-                <li class="text-xl font-medium">Total: <span id="finalPrice"
-                    class="text-lg font-normal opacity-40">00</span> <span class="opacity-40 text-lg">TK</span> </li>
-              </ul>
-
-              <div class="">
-                <!-- make purchase button area -->
-                <button class="capitalize bg-[#E527B2] text-white text-lg font-medium px-6 mt-1 py-2 rounded-md"
-                  onclick="my_modal_1.showModal()" id="makePurchaseButton" disabled>Make Purchase</button>
-
-                <!-- modal area -->
-                <dialog id="my_modal_1" class="modal">
-                  <form method="dialog" class="modal-box">
-                    <img class="mx-auto" src="images/congo.png" alt="">
-                    <h1 class="font-bold text-4xl text-center">Congratulations</h1>
-                    <p class="py-4 w-96 mx-auto text-center">Your Purchase the product</p>
-
-                    <div class="modal-action flex">
-                      <div class="flex gap-5 w-20 mx-auto justify-center">
-                        <button id="goHomeButton"
-                          class="btn border-2 capitalize bg-[#E527B2] text-white text-lg font-medium px-6 mt-1 py-2 rounded-md">
-                          Go Home
-                        </button>
-
-
-                      </div>
-                    </div>
-                  </form>
-                </dialog>
-              </div>
-
-            </div>
-          </div>
-
-
         </div>
-      </div>
-      <!-- Sportswear section-->
-      <div>
-        <h2 class="text-4xl font-semibold text-[#111] mb-5 ml-44">Sportswear</h2>
-        <!-- Sportswear card -->
-        <div class="grid grid-cols-3 px-44 gap-7 mr-[355px]">
-          <!-- card-1 -->
+
+        <!-- Sportswear section-->
+        <h2 class="text-4xl font-semibold text-[#111] mb-10 mt-16 ">Sportswear</h2>
+
+        <div class="flex gap-10 mb-16">
+          <!-- Sportswear card -->
+
+          <!-- card-4 -->
           <div onclick="handleClick(this)"
             class="space-y-5 text-center rounded-lg px-16 py-10 bg-white hover:bg-green-200 cursor-pointer duration-100">
-            <img class="mx-auto w-72 h-40 bg-slate-200 px-10 rounded-md py-8" src="images/prod4.png" alt="">
+            <img class="mx-auto w-64 h-48 bg-slate-200 px-10 rounded-md py-8" src="images/prod4.png" alt="">
             <!-- ratings -->
             <div class="rating">
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -182,10 +124,11 @@
             <h5 class="text-2xl font-semibold">Sports Back Cap</h5>
             <p class="text-lg font-normal opacity-50">49.00 TK</p>
           </div>
-          <!-- card-2 -->
+
+          <!-- card-5 -->
           <div onclick="handleClick(this)"
             class="space-y-5 text-center rounded-lg px-16 py-10 bg-white hover:bg-green-200 cursor-pointer duration-100">
-            <img class="mx-auto w-72 h-40 bg-slate-200 px-10 rounded-md py-8" src="images/prod5.png" alt="">
+            <img class="mx-auto w-64 h-48 bg-slate-200 px-10 rounded-md py-8" src="images/prod5.png" alt="">
             <!-- ratings -->
             <div class="rating">
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -197,10 +140,11 @@
             <h5 class="text-2xl font-semibold">Full Jersey Set</h5>
             <p class="text-lg font-normal opacity-50">69.00 TK</p>
           </div>
-          <!-- card-3 -->
+
+          <!-- card-6 -->
           <div onclick="handleClick(this)"
             class="space-y-5 text-center rounded-lg px-16 py-10 bg-white hover:bg-green-200 cursor-pointer duration-100">
-            <img class="mx-auto w-72 h-40 bg-slate-200 px-10 rounded-md py-8" src="images/prod6.png" alt="">
+            <img class="mx-auto w-64 h-48 bg-slate-200 px-10 rounded-md py-8" src="images/prod6.png" alt="">
             <!-- ratings -->
             <div class="rating">
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -212,10 +156,70 @@
             <h5 class="text-2xl font-semibold">Sports cates</h5>
             <p class="text-lg font-normal opacity-50">159.00 TK</p>
           </div>
-
         </div>
       </div>
 
+
+      <!-- coupon section -->
+      <div class=" w-[20%] mt-36">
+
+        <!-- coupon input and apply button area -->
+        <div class="px-2 w-80 pt-3 h-36 rounded-md mb-12 bg-white">
+          <h3 class="text-2xl font-semibold mb-3">Have coupon?</h3>
+
+          <div class="input-group">
+            <input type="text" placeholder="Coupon code" class="input input-bordered" id="couponCodeInput" />
+
+            <button id="applyButton" class="bg-slate-300 text-white text-lg font-medium px-3 rounded-md"
+              disabled>Apply</button>
+
+          </div>
+        </div>
+        <!-- calculation box -->
+
+        <div class="calculation-box w-80  bg-white px-12 py-2 h-96  rounded-md">
+
+          <div class="textContainer border-b-2 border-gray-200" id="selectedItems">
+          </div>
+
+          <ul class="calculation-box mt-5 mb-5 border-b-2 border-gray-200 pb-5">
+            <li class="text-xl font-medium">Total price: <span id="totalPrice"
+                class="text-lg font-normal opacity-40">00</span> <span class="opacity-40 text-lg">TK</span> </li>
+            <li class="text-xl font-medium">Discount: <span id="discountPrice"
+                class="text-lg font-normal opacity-40">00</span> <span class="opacity-40 text-lg">TK</span> </li>
+            <li class="text-xl font-medium">Total: <span id="finalPrice"
+                class="text-lg font-normal opacity-40">00</span> <span class="opacity-40 text-lg">TK</span> </li>
+          </ul>
+
+          <div class="">
+            <!-- make purchase button area -->
+            <button class="capitalize  bg-slate-300 text-white text-lg font-medium px-6 mt-1 py-2 rounded-md"
+              onclick="my_modal_1.showModal()" id="makePurchaseButton" disabled>Make Purchase</button>
+
+            <!-- modal area -->
+            <dialog id="my_modal_1" class="modal">
+              <form method="dialog" class="modal-box">
+                <img class="mx-auto" src="images/congo.png" alt="">
+                <h1 class="font-bold text-4xl text-center">Congratulations</h1>
+                <p class="py-4 w-96 mx-auto text-center">Your Purchase the product</p>
+
+                <div class="modal-action flex">
+                  <div class="flex gap-5 w-20 mx-auto justify-center">
+                    <button id="goHomeButton"
+                      class="btn border-2 capitalize bg-[#E527B2] text-white text-lg font-medium px-6 mt-1 py-2 rounded-md">
+                      Go Home
+                    </button>
+
+
+                  </div>
+                </div>
+              </form>
+            </dialog>
+          </div>
+
+        </div>
+
+      </div>
     </section>
   </main>
 

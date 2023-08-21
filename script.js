@@ -4,12 +4,12 @@ let total = 0;
 function handleClick(target) {
 
   const selectedItemsContainer = document.getElementById('selectedItems');
-  // const itemName = target.parentNode.childNodes[3].childNodes[7].innerText;
   const itemName = target.childNodes[7].innerText;
 
   console.log(target.childNodes[7].innerText);
-  const li = document.createElement('p');
-  li.innerText = itemName;
+  const li = document.createElement('h1');
+  const count = selectedItemsContainer.childElementCount;
+  li.innerHTML = `${count + 1}.${itemName}`;
   selectedItemsContainer.appendChild(li);
 
   const priceString = target.childNodes[9].innerText.split(' ')[0];
@@ -28,9 +28,18 @@ function finalTotalPrice() {
   const makePurchaseButton = document.getElementById('makePurchaseButton');
   makePurchaseButton.disabled = total <= 0;
 
+  if (total > 0) {
+    makePurchaseButton.classList.remove('bg-slate-300');
+    makePurchaseButton.classList.add('bg-[#E527B2]');
+  } else {
+    makePurchaseButton.classList.remove('bg-[#E527B2]');
+    makePurchaseButton.classList.add('bg-slate-300');
+  }
+
   const applyButton = document.getElementById('applyButton');
   applyButton.disabled = total < 200;
 }
+
 
 
 
@@ -53,6 +62,21 @@ document.getElementById('applyButton').addEventListener('click', function () {
   }
 });
 
+
+
+//Coupon code apply button color enable area
+
+couponCodeInput.addEventListener('input', function () {
+  const couponCode = couponCodeInput.value.trim();
+  if (couponCode === 'SELL200') {
+    applyButton.classList.remove('bg-slate-300');
+    applyButton.classList.add('bg-[#E527B2]');
+  }
+});
+
+
+
+
 // Go home button part and resetting value to zero , clear text area empty and will take me to homepage
 document.getElementById('goHomeButton').addEventListener('click', function () {
   total = 0;
@@ -67,5 +91,7 @@ document.getElementById('goHomeButton').addEventListener('click', function () {
 
   const modal = document.getElementById('my_modal_1');
   modal.close();
+  location.reload();
+
 });
 
